@@ -15,6 +15,7 @@ def home_view(request):
         if 'contact_submit' in request.POST:
             contact_form = ContactForm(request.POST)
             if contact_form.is_valid():
+                print("Formulaire valide, tentative d'envoi...")
                 nom = contact_form.cleaned_data['nom']
                 email = contact_form.cleaned_data['email']
                 sujet=contact_form.cleaned_data['sujet']
@@ -30,7 +31,7 @@ def home_view(request):
                         ['djibrila6299@gmail.com'], 
                         fail_silently=False,
                     )
-                
+                    print("Mail envoyé avec succès !")
                     return redirect('blog_app:confirmation')
                 except Exception as e:
                          messages.error(request, f"Erreur lors de l'envoi : {e}")
