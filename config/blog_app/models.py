@@ -8,7 +8,7 @@ class Publication(models.Model):
     
     titre = models.CharField(max_length=200, verbose_name="Titre")
     contenu = models.TextField(verbose_name="Contenu")
-    slug = models.SlugField(null=True, blank=True, unique=True, verbose_name="Slug")
+    slug = models.URLField(null=True, blank=True, unique=True, verbose_name="Slug")
     date_publication = models.DateTimeField(auto_now_add=True, verbose_name="Date de publication")
     date_mis_a_jour = models.DateTimeField(auto_now=True, verbose_name="Date de mise à jour")
     image = models.ImageField(blank=True, null=True, verbose_name="Image")

@@ -33,22 +33,22 @@
             
             background-color: #f9f9f9;
             width: 100%;
-    overflow-x: hidden; /* Empêche le défilement horizontal parasite */
+    overflow-x: hidden;
     
         }
 
         section h2{align-items: center;text-align: center;font-size: 40px;}
        .grid-container {
                  display: grid;
-    /* On force strictement 3 colonnes de tailles égales */
+   
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
-    padding: 20px 4%; /* Aligne visuellement avec ton contenu */
-    max-width: 100%;  /* S'assure de ne pas dépasser l'écran */
+    padding: 20px 4%; 
+    max-width: 100%;  
     box-sizing: border-box;
         }
 
-        /* Style de chaque carte de compétence */
+       
         .contenu-comp {
            background: #3b3024;
     color: white;
@@ -63,10 +63,10 @@
     display: flex;
     flex-direction: column;
 
-    /* TAILLE CONTRÔLÉE */
-    max-width: 230px; /* Empêche la carte de devenir une autoroute */
+    
+    max-width: 230px; 
    
-    word-wrap: break-word; /* Force le texte à rester dans la boîte */
+    word-wrap: break-word; 
     overflow: hidden;
            
     
@@ -76,14 +76,14 @@
     line-height: 1.5;
     word-wrap: break-word;
 }
-        /* Hover séduisant : Redressement et élévation */
+        
         .contenu-comp:hover {
             transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(-10px);
             box-shadow: 0 20px 40px rgba(46, 204, 113, 0.4);
             background: linear-gradient(135deg, #011a0c, #464389);
         }
 
-        /* Typographie et liens */
+       
         .contenu-comp h3 {
             margin-top: 0;
             font-size: 1.5rem;
@@ -131,9 +131,9 @@
             display: flex;gap: 20px;margin-top: 30%;
         }
         .pied-image img{width: 25px;}
-        /* Conteneur principal */
+        
        .voir-plus-link {
-    color: #a2d9ff; /* Bleu clair ou blanc selon ton goût */
+    color: #a2d9ff; 
     cursor: pointer;
     font-weight: bold;
     margin-left: 5px;
@@ -152,32 +152,32 @@
         }
          .grid-contain {
                  display: grid;
-    /* On force strictement 3 colonnes de tailles égales */
+    
     grid-template-columns: repeat(3, 1fr); 
     gap: 10px;
-    padding: 20px 4%; /* Aligne visuellement avec ton contenu */
-    max-width: 100%;  /* S'assure de ne pas dépasser l'écran */
+    padding: 20px 4%; 
+    max-width: 100%;  
     box-sizing: border-box;
         }
 
-        /* Style de chaque carte de compétence */
+
         .contenu-art {
           background-color: palegoldenrod;
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     
-    /* Effet oblique */
+    
     transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
     display: flex;
     flex-direction: column;
 
-    /* TAILLE CONTRÔLÉE */
-    max-width: 250px; /* Empêche la carte de devenir une autoroute */
+    
+    max-width: 250px; 
    
-    word-wrap: break-word; /* Force le texte à rester dans la boîte */
+    word-wrap: break-word; 
     overflow: hidden;
            
     
@@ -187,14 +187,14 @@
     line-height: 1.5;
     word-wrap: break-word;
 }
-        /* Hover séduisant : Redressement et élévation */
+       
         .contenu-art:hover {
             transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(-10px);
             box-shadow: 0 20px 40px rgba(82, 94, 87, 0.4);
             
         }
 
-        /* Typographie et liens */
+       
         .contenu-art h3 {
             margin-top: 0;
             font-size: 1.5rem;
@@ -214,21 +214,21 @@
         }
         .contenu {
             display: flex;
-            align-items: flex-start; /* Aligne l'image en haut à droite du texte */
-            gap: 15px;               /* Espace fixe entre le texte et l'image */
-            width: 100%;             /* S'assure que le conteneur utilise toute la largeur */
-            overflow: hidden;        /* Empêche les débordements visuels */
+            align-items: flex-start; 
+            gap: 15px;              
+            width: 100%;             
+            overflow: hidden;        
         }
 
         .contenu p {
-            flex: 1;                 /* FORCE le texte à prendre l'espace restant uniquement */
-            min-width: 0;            /* TRÈS IMPORTANT : permet au texte de se couper/wrapper sans pousser le parent */
-            word-wrap: break-word;   /* Casse les mots trop longs si nécessaire */
+            flex: 1;                
+            min-width: 0;           
+            word-wrap: break-word;   
         }
 
         .contenu img {
-            flex-shrink: 0;          /* INTERDIT à l'image de rétrécir, peu importe la longueur du texte */
-            width: 50px;             /* Largeur fixe pour garantir sa visibilité */
+            flex-shrink: 0;         
+            width: 50px;            
             height: auto;
         }
 
@@ -249,11 +249,11 @@
             opacity: 0.8;
             font-style: italic;
         }
-        /* 1. On définit le mouvement : de invisible à visible */
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px); /* Optionnel : petit effet de montée */
+                transform: translateY(20px); 
             }
             to {
                 opacity: 1;

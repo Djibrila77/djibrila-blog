@@ -36,10 +36,10 @@
         </div>
         <div class="parcour">
             <h3>Decouvrez mon parcours inspirant..</h3>
-            <p>This is a space to share more about the business: who's behind it, 
-                what it does and what this site has to offer. 
-                It’s an opportunity to tell the story behind the business or describe a special service or product it offers. 
-                You can use this section to share the company's history or highlight a particular feature that sets it apart from competitors.
+            <p>Découvrez le récit derrière mes lignes de code. 
+                Mon parcours d'aspirant Data Scientist est guidé par une curiosité sans fin pour l'intelligence artificielle et l'Open Source. 
+                Ici, je documente mon évolution, des premiers algorithmes à la réalisation de projets complexes. 
+                Je crois fermement que le partage de connaissances est la clé de l'innovation, c'est pourquoi vous trouverez ici mes articles et mes contributions en accès libre.
             </p>
         </div>
         
@@ -54,7 +54,7 @@
                     <h3>{{ comp.titre }}</h3>
                     {% if comp.image %}<img src="{{ comp.image.url }}" alt="{{ comp.titre }}">{% endif %}
                     <p>{{ comp.contenu }}</p>
-                    <a href="{{ comp.slug }}">{{ comp.slug }}</a>
+                    <a href="{{ comp.slug }}">Cliquez sur le lien github</a>
                     <small>Publié le {{ comp.date_publication|date:"d/m/Y" }}</small>
                 </div>
             {% empty %}
@@ -79,7 +79,7 @@
                                 <span class="voir-plus-link" onclick="toggleText(this)">... Voir plus</span>
                             {% endif %}
                         </p>
-                        <img src="{{ article.image.url }}" alt="{{ article.titre }}" style="max-width: 50px;">
+                        <img src="{{ article.image.url }}" alt="img" style="max-width: 50px;">
 
                     </div>
                     <small class="date-droite">le {{ article.date_publication|date:"d/m/Y" }}</small>
@@ -125,10 +125,15 @@
                     </div>
                 </div>
                 <div class="pied-image">
+                    <a href="https://github.com/Djibrila77/" target="_blank">
+                         <img src="/media/git.png" alt="img">
+                    </a>
+                    
                     <img src="/media/145807.png" alt="img">
+                    
                     <img src="/media/1384023.png" alt="img">
                     <img src="/media/5968764.png" alt="img">
-                    <img src="/media/5968958.png" alt="img">
+                    
 
                 </div>
                 
@@ -151,7 +156,7 @@
 <script>
     function toggleMenu() {
         const nav = document.getElementById('nav-menu');
-        // On ajoute ou on enlève la classe 'active' à chaque clic
+       
         nav.classList.toggle('active');
     }
 
